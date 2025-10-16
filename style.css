@@ -11,16 +11,16 @@ body {
   color: #333;
 }
 
-/* Masonry layout */
+/* Masonry (Pinterest-style) layout */
 .grid-container {
   column-count: 4;      /* Number of columns on large screens */
-  column-gap: 10px;     /* Small horizontal gap between columns */
-  padding: 10px;        /* Space around the whole grid */
+  column-gap: 10px;     /* Small gap between columns */
+  padding: 10px;
 }
 
 .grid-item {
-  break-inside: avoid;  /* Prevent image break between columns */
-  margin-bottom: 10px;  /* Small vertical gap between images */
+  break-inside: avoid;
+  margin-bottom: 10px;
 }
 
 .grid-item img {
@@ -36,21 +36,32 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive layout */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .grid-container {
     column-count: 3;
+    padding: 8px;
+  }
+  .title {
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .grid-container {
     column-count: 2;
+    padding: 6px;
+  }
+  .title {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .grid-container {
     column-count: 1;
+    padding: 5px;
+  }
+  .title {
+    font-size: 1.3rem;
   }
 }
