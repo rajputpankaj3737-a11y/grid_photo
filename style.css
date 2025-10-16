@@ -11,21 +11,46 @@ body {
   color: #333;
 }
 
+/* Masonry layout */
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  column-count: 4;      /* Number of columns on large screens */
+  column-gap: 10px;     /* Small horizontal gap between columns */
+  padding: 10px;        /* Space around the whole grid */
+}
+
+.grid-item {
+  break-inside: avoid;  /* Prevent image break between columns */
+  margin-bottom: 10px;  /* Small vertical gap between images */
 }
 
 .grid-item img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .grid-item img:hover {
   transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .grid-container {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    column-count: 1;
+  }
 }
