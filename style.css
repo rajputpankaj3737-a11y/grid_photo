@@ -11,10 +11,10 @@ body {
   color: #333;
 }
 
-/* Masonry (Pinterest-style) layout */
+
 .grid-container {
-  column-count: 4;      /* Number of columns on large screens */
-  column-gap: 10px;     /* Small gap between columns */
+  column-count: 4;  
+  column-gap: 10px;
   padding: 10px;
 }
 
